@@ -1,6 +1,6 @@
 # Day_Planner
 
-![alt text](https://sdemkovich.github.io/Day_Planner/)
+(https://sdemkovich.github.io/Day_Planner/)
 
 ## Description
 The work day planer shows the hours for a  work day (8am - 6pm) in a table. User can input event into each hour, save and update it.
@@ -14,5 +14,5 @@ The Event column also changes color depending on the actual time of day. Green r
 * jQuery
 
 ## Usage
-![Demo](https://drive.google.com/file/d/1OVi0h6nnm5-cxaZ6vnLPVzPRuNV-px7l/view)
+[Demo](https://drive.google.com/file/d/1OVi0h6nnm5-cxaZ6vnLPVzPRuNV-px7l/view)
 
