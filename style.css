@@ -15,10 +15,10 @@ body {
   }
   
   .jumbotron {
-    background-color: lightblue;
+    background-color: rgb(194, 213, 220);
     color: black;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 5px solid darkblue;
   }
   
   .row {
@@ -29,12 +29,12 @@ body {
   
   #tableHead {
     text-align: center;
-    font-size: x-large;
+    font-weight: bold;
+    font-size: 20px;
   }
   
   #tableBody {
-    text-align: center;
-    font-size: large;
+    font-size: 16px;
   }
   
   .timeCol {
@@ -43,13 +43,17 @@ body {
   
   .saveCol {
     border-left: 1px solid gray;
-  
+    text-align: center;
   }
-  
+
+  .saveBtn {
+    width: 75%;
+    max-height: 90%;
+  }
   .eventCol {
     outline: none;
   }
   
   #currentDay {
-    font-size: x-large;
+    font-size: 22px;
   }

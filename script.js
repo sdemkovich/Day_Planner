@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
     // Adding current date to the top of the page
-    var currentDate = moment().format('dddd MMMM Do YYYY');
+    var currentDate = moment().format('dddd,  MMMM Do YYYY');
     $("#currentDay").text(currentDate);
     
-    // Starting functions - pull from localStorage and update screen based off time
-    updateFromLocalStorage();
-    renderScreen();
+    
     
     // Add function to check localStorage for userEdits and render them to the page
-    function updateFromLocalStorage() {
+    function LocalStorage() {
         var userEdits8 = JSON.parse(localStorage.getItem("userEdits8"));
         if (userEdits8 !== null) {
           $("#8").text(userEdits8);
@@ -55,14 +53,16 @@ $(document).ready(function() {
           $("#18").text(userEdits18);
         };
     };
-    
+
+    LocalStorage();
+
     // On click on Save button
     $(".saveBtn").on("click", function() {
-        var currentEventID = event.target.parentElement.previousElementSibling.id;
-        console.log(currentEventID);
+        var eventID = event.currentTarget.parentElement.previousElementSibling.id;
+        console.log(eventID);
         var currentTableCell = event.target.parentElement.previousElementSibling;
         console.log(currentTableCell.innerText);
-        localStorage.setItem(["userEdits"+currentEventID], JSON.stringify(currentTableCell.innerText));
+        localStorage.setItem(["userEdits"+ eventID], JSON.stringify(currentTableCell.innerText));
        
     });
     
@@ -75,25 +75,26 @@ $(document).ready(function() {
     
     // Render event table with appropriate color
     function renderScreen() {
-      var currentHour = (moment().hour());
-      console.log(currentHour);
-      var idArr = [];
+      var currentTime = (moment().hour());
+      console.log(currentTime);
+      var idHour = [];
       $(".eventCol").each(function(){
-        idArr.push($(this).attr("id"));
+        idHour.push($(this).attr("id"));
       })
-      console.log(idArr);
-     for (i = 0; i < idArr.length; i++){
-       if (currentHour == idArr[i]){
-         $("#" + idArr[i]).addClass("table-danger");
+      console.log(idHour);
+     for (i = 0; i < idHour.length; i++){
+       if (currentTime == idHour[i]){
+         $("#" + idHour[i]).addClass("table-danger");
        } 
-       if (idArr[i] < currentHour) {
-         $("#" + idArr[i]).addClass("table-secondary");
+       if (idHour[i] < currentTime) {
+         $("#" + idHour[i]).addClass("table-secondary");
        }
-       if (idArr[i] > currentHour) {
-         $("#" + idArr[i]).addClass("table-success");
+       if (idHour[i] > currentTime) {
+         $("#" + idHour[i]).addClass("table-success");
        }
      }
     };
+    renderScreen();
     
     // On Click to Clear All button, clears localStorage and all todos
     $(".clearEventsBtn").on("click", function(){

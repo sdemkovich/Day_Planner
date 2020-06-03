@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/7dd83c9a29.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Planner</title>
 </head>
@@ -27,70 +27,72 @@
     <div class="container">
         </table>
         <div class="container-fluid">
+            <div class="float-right"><button type="button" class="btn btn-warning btn-md clearEventsBtn">Clear All Events</button></div>
             <table class="table">
                 <thead id="tableHead">
                     <tr class="row">
                         <th class="col-sm-1 timeCol">Time</th>
-                        <th class="col-sm-9">Calendar Events</th>
-                        <th class="col-sm-2 saveCol"> <button type="button" class="btn btn-warning clearEventsBtn">Clear
-                                All Events</button></th>
+                        <th class="col-sm-9" >Calendar Events</th>
+                        <th class="col-sm-2 saveCol"></th>
+
+                        
                     </tr>
                 </thead>
                 <tbody id="tableBody">
                     <tr class="row" id="eightAmRow">
                         <td class="col-sm-1 timeCol">8 AM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="8"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="nineAmRow">
                         <td class="col-sm-1 timeCol">9 AM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="9"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="tenAmRow">
                         <td class="col-sm-1 timeCol">10 AM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="10"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="elevenAmRow">
                         <td class="col-sm-1 timeCol">11 AM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="11"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="twelvePmRow">
                         <td class="col-sm-1 timeCol">12 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="12"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="onePmRow">
                         <td class="col-sm-1 timeCol">1 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="13"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="twoPmRow">
                         <td class="col-sm-1 timeCol">2 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="14"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="threePmRow">
                         <td class="col-sm-1 timeCol">3 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="15"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="fourPmRow">
                         <td class="col-sm-1 timeCol">4 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="16"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="fivePmRow">
                         <td class="col-sm-1 timeCol">5 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="17"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                     <tr class="row" id="sixPmRow">
                         <td class="col-sm-1 timeCol">6 PM</td>
                         <td class="col-sm-9 eventCol" contenteditable="true" id="18"></td>
-                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button></td>
+                        <td class="col-sm-2 saveCol"><button type="button" class="btn btn-primary btn-lg saveBtn"><i class="fas fa-save"></i></button></td>
                     </tr>
                 </tbody>
             </table>
