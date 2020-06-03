@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .jumbotron {
+    background-color: lightblue;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+  
+  .row {
+    white-space: pre-wrap;
+    height: 60px;
+    border-top: 1px solid white;
+  }
+  
+  #tableHead {
+    text-align: center;
+    font-size: x-large;
+  }
+  
+  #tableBody {
+    text-align: center;
+    font-size: large;
+  }
+  
+  .timeCol {
+    border-right: 1px solid gray;
+  }
+  
+  .saveCol {
+    border-left: 1px solid gray;
+  
+  }
+  
+  .eventCol {
+    outline: none;
+  }
+  
+  #currentDay {
+    font-size: x-large;
+  }
