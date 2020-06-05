@@ -4,65 +4,66 @@ $(document).ready(function() {
     var currentDate = moment().format('dddd,  MMMM Do YYYY');
     $("#currentDay").text(currentDate);
     
+    LocalStorage();
     
-    
-    // Add function to check localStorage for userEdits and render them to the page
+    // Add function to check localStorage for userInput and render them to the page
     function LocalStorage() {
-        var userEdits8 = JSON.parse(localStorage.getItem("userEdits8"));
-        if (userEdits8 !== null) {
-          $("#8").text(userEdits8);
+        var userInput8 = JSON.parse(localStorage.getItem("userInput8"));
+        console.log(userInput8);
+        if (userInput8 !== null) {
+          $("#8").text(userInput8);
         };
-        var userEdits9 = JSON.parse(localStorage.getItem("userEdits9"));
-        if (userEdits9 !== null) {
-          $("#9").text(userEdits9);
+        var userInput9 = JSON.parse(localStorage.getItem("userInput9"));
+        if (userInput9 !== null) {
+          $("#9").text(userInput9);
         };
-        var userEdits10 = JSON.parse(localStorage.getItem("userEdits10"));
-        if (userEdits10 !== null) {
-          $("#10").text(userEdits10);
+        var userInput10 = JSON.parse(localStorage.getItem("userInput10"));
+        if (userInput10 !== null) {
+          $("#10").text(userInput10);
         };
-        var userEdits11 = JSON.parse(localStorage.getItem("userEdits11"));
-        if (userEdits11 !== null) {
-          $("#11").text(userEdits11);
+        var userInput11 = JSON.parse(localStorage.getItem("userInput11"));
+        if (userInput11 !== null) {
+          $("#11").text(userInput11);
         };
-        var userEdits12 = JSON.parse(localStorage.getItem("userEdits12"));
-        if (userEdits12 !== null) {
-          $("#12").text(userEdits12);
+        var userInput12 = JSON.parse(localStorage.getItem("userInput12"));
+        if (userInput12 !== null) {
+          $("#12").text(userInput12);
         };
-        var userEdits13 = JSON.parse(localStorage.getItem("userEdits13"));
-        if (userEdits13 !== null) {
-          $("#13").text(userEdits13);
+        var userInput13 = JSON.parse(localStorage.getItem("userInput13"));
+        if (userInput13 !== null) {
+          $("#13").text(userInput13);
         };
-        var userEdits14 = JSON.parse(localStorage.getItem("userEdits14"));
-        if (userEdits14 !== null) {
-          $("#14").text(userEdits14);
+        var userInput14 = JSON.parse(localStorage.getItem("userInput14"));
+        if (userInput14 !== null) {
+          $("#14").text(userInput14);
         };
-        var userEdits15 = JSON.parse(localStorage.getItem("userEdits15"));
-        if (userEdits15 !== null) {
-          $("#15").text(userEdits15);
+        var userInput15 = JSON.parse(localStorage.getItem("userInput15"));
+        if (userInput15 !== null) {
+          $("#15").text(userInput15);
         };
-        var userEdits16 = JSON.parse(localStorage.getItem("userEdits16"));
-        if (userEdits16 !== null) {
-          $("#16").text(userEdits16);
+        var userInput16 = JSON.parse(localStorage.getItem("userInput16"));
+        if (userInput16 !== null) {
+          $("#16").text(userInput16);
         };
-        var userEdits17 = JSON.parse(localStorage.getItem("userEdits17"));
-        if (userEdits17 !== null) {
-          $("#17").text(userEdits17);
+        var userInput17 = JSON.parse(localStorage.getItem("userInput17"));
+        if (userInput17 !== null) {
+          $("#17").text(userInput17);
         };
-        var userEdits18 = JSON.parse(localStorage.getItem("userEdits18"));
-        if (userEdits18 !== null) {
-          $("#18").text(userEdits18);
+        var userInput18 = JSON.parse(localStorage.getItem("userInput18"));
+        if (userInput18 !== null) {
+          $("#18").text(userInput18);
         };
     };
 
-    LocalStorage();
+    
 
     // On click on Save button
     $(".saveBtn").on("click", function() {
         var eventID = event.currentTarget.parentElement.previousElementSibling.id;
         console.log(eventID);
-        var currentTableCell = event.target.parentElement.previousElementSibling;
+        var currentTableCell = event.currentTarget.parentElement.previousElementSibling;
         console.log(currentTableCell.innerText);
-        localStorage.setItem(["userEdits"+ eventID], JSON.stringify(currentTableCell.innerText));
+        localStorage.setItem(["userInput"+ eventID], JSON.stringify(currentTableCell.innerText));
        
     });
     
